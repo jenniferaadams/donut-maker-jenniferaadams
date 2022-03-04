@@ -10,8 +10,15 @@ export default class DonutMaker {
         this.donutCount ++;
     }
     addToAutoClickerCount(){
+        if (this.donutCount >= this.autoClickerCost){
         this.autoClicker ++;
         this.donutCount -= this.autoClickerCost;
-        this.autoClickerCost *= 1.1;
+        this.autoClickerCost = Math.round(this.autoClickerCost*1.1);
+    }
+    console.log("Not enough donuts");
+}
+    activateAutoClickers(){
+        this.donutCount += this.autoClicker;
+        console.log(this.autoClicker);
     }
 }
