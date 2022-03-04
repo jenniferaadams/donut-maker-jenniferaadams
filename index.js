@@ -1,9 +1,14 @@
 import DonutMaker from "./DonutMaker.js";
 const donutMaker = new DonutMaker();
 
-// donutMaker.addToDonutCount()
-// let clicker = setInterval(donutMaker.activateAutoClickers,1000)
 // let donutCount = donutMaker.donutCount;
+// donutMaker.addToDonutCount()
+setInterval(function(){
+  donutMaker.activateAutoClickers();
+  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+},1000);
+
+
 
 const addDonutBtn = document.querySelector(".donutButton");
 const totalDisplay = document.querySelector(".totalDonutCount")
