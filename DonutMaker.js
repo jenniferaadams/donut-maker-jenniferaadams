@@ -8,8 +8,9 @@ export default class DonutMaker {
     }
 
     addToDonutCount() {
-        this.donutCount ++;
+        this.donutCount += Math.pow(1.2, this.donutMultiplier);
     }
+
     addToAutoClickerCount(){
         if (this.donutCount >= this.autoClickerCost){
         this.autoClicker ++;
@@ -19,7 +20,9 @@ export default class DonutMaker {
     console.log("Not enough donuts");
 }
     activateAutoClickers(){
-        this.donutCount += this.autoClicker;
+        for(let i=0; i<this.autoClicker; i++){
+            this.addToDonutCount();
+        }
         console.log(this.autoClicker);
     }
 
@@ -29,7 +32,9 @@ export default class DonutMaker {
         this.donutCount -= this.donutMultCost;
         this.donutMultCost = Math.round(this.donutMultCost*1.1);
     }
-    console.log("Not enough donuts to purchase a multiplier");
+    else console.log("Not enough donuts to purchase a multiplier");
+       
 }
+
 }
     
