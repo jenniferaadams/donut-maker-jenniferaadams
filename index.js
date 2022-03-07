@@ -26,4 +26,12 @@ addAutoClickBtn.addEventListener("click", () =>{
   totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
 })
 
+const addDonutMultBtn = document.querySelector(".donutMultiplier");
+const multDisplay = document.querySelector(".totalDonutMultiplierCount");
+addDonutMultBtn.addEventListener("click", () => {
+  donutMaker.addToDonutMultCount();
+  multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
+  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+})
+
 
