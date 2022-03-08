@@ -15,6 +15,7 @@ const autoDisplay = document.querySelector(".totalAutoClickerCount");
 const addDonutMultBtn = document.querySelector(".donutMultiplier");
 const multDisplay = document.querySelector(".totalDonutMultiplierCount");
 
+
 addDonutBtn.addEventListener("click", () => {
   donutMaker.addToDonutCount();
   totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
@@ -31,6 +32,20 @@ addDonutMultBtn.addEventListener("click", () => {
   donutMaker.addToDonutMultCount();
   multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
   totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+})
+
+const modal = document.querySelector(".modal");
+const btn = document.querySelector(".companyButton");
+const span = document.querySelector(".close");
+modal.style.display = "none";
+
+btn.addEventListener("click", () =>{
+  modal.style.display = "block";
+})
+
+span.addEventListener("click", () =>{
+  modal.style.display = "none";
+  console.log(modal);
 })
 
 
