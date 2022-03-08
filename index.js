@@ -34,18 +34,20 @@ addDonutMultBtn.addEventListener("click", () => {
   totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
 })
 
-const modal = document.querySelector(".modal");
-const btn = document.querySelector(".companyButton");
-const span = document.querySelector(".close");
-modal.style.display = "none";
+const companyModal = document.querySelector(".companyModal");
+const companyBtn = document.querySelector(".companyButton");
+const companyClose = document.querySelector(".companyClose");
+companyModal.style.display = "none";
 
-btn.addEventListener("click", () =>{
-  modal.style.display = "block";
+companyBtn.addEventListener("click", () =>{
+  companyModal.style.display = "block";
 })
 
-span.addEventListener("click", () =>{
-  modal.style.display = "none";
+companyClose.addEventListener("click", () =>{
+  companyModal.style.display = "none";
   console.log(modal);
 })
+
+
 
 
