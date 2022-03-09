@@ -14,6 +14,10 @@ setInterval(function(){
   totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
   multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
   autoDisplay.innerText = "Auto Clicker Count: " + donutMaker.autoClicker;
+  valueOfMult.innerText = "Donuts Earned Per Click: " + Math.pow(1.2, donutMaker.donutMultiplier).toFixed(2);
+  autoClickCostDisplay.innerText = "Auto Clicker Cost: " + Math.round(donutMaker.autoClickerCost);
+  donMultCostDisplay.innerText = "Donut Multiplier Cost: " + Math.round(donutMaker.donutMultCost);
+  restartGameBtn.innerText = "Start Over";
 },500);
 
 const addDonutBtn = document.querySelector(".donutButton");
@@ -22,6 +26,10 @@ const addAutoClickBtn = document.querySelector(".autoClicker");
 const autoDisplay = document.querySelector(".totalAutoClickerCount");
 const addDonutMultBtn = document.querySelector(".donutMultiplier");
 const multDisplay = document.querySelector(".totalDonutMultiplierCount");
+const valueOfMult = document.querySelector(".earnedPerClick");
+const autoClickCostDisplay = document.querySelector(".autoClickerCostDisplay");
+const donMultCostDisplay = document.querySelector(".multCostDisplay");
+const restartGameBtn = document.querySelector(".restartGameBtn");
 
 
 addDonutBtn.addEventListener("click", () => {
@@ -65,6 +73,10 @@ devButton.addEventListener("click", () =>{
 })
 devClose.addEventListener("click", () => {
   devModal.style.display = "none";
+})
+
+restartGameBtn.addEventListener("click", () => {
+  window.location.reload();
 })
 
 
