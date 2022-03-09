@@ -5,8 +5,16 @@ const donutMaker = new DonutMaker();
 // donutMaker.addToDonutCount()
 setInterval(function(){
   donutMaker.activateAutoClickers();
-  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+
 },1000);
+
+setInterval(function(){
+  donutMaker.disableAutoClicker();
+  donutMaker.disableDonutMult();
+  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+  multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
+  autoDisplay.innerText = "Auto Clicker Count: " + donutMaker.autoClicker;
+},500);
 
 const addDonutBtn = document.querySelector(".donutButton");
 const totalDisplay = document.querySelector(".totalDonutCount")
@@ -45,7 +53,18 @@ companyBtn.addEventListener("click", () =>{
 
 companyClose.addEventListener("click", () =>{
   companyModal.style.display = "none";
-  console.log(modal);
+})
+
+const devModal = document.querySelector(".developerModal");
+const devButton = document.querySelector(".developerInfoBtn");
+const devClose = document.querySelector(".devClose");
+devModal.style.display = "none";
+
+devButton.addEventListener("click", () =>{
+  devModal.style.display = "block";
+})
+devClose.addEventListener("click", () => {
+  devModal.style.display = "none";
 })
 
 

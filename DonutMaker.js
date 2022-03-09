@@ -15,7 +15,7 @@ export default class DonutMaker {
         if (this.donutCount >= this.autoClickerCost){
         this.autoClicker ++;
         this.donutCount -= this.autoClickerCost;
-        this.autoClickerCost = Math.round(this.autoClickerCost*1.1);
+        this.autoClickerCost = this.autoClickerCost*1.1;
     }
     console.log("Not enough donuts");
 }
@@ -30,11 +30,26 @@ export default class DonutMaker {
         if (this.donutCount >= this.donutMultCost){
         this.donutMultiplier ++;
         this.donutCount -= this.donutMultCost;
-        this.donutMultCost = Math.round(this.donutMultCost*1.1);
+        this.donutMultCost = this.donutMultCost*1.2;
     }
     else console.log("Not enough donuts to purchase a multiplier");
        
 }
 
+    disableAutoClicker(){
+        const autoClickerBtn = document.querySelector(".autoClicker");
+        if(this.donutCount < this.autoClickerCost) {
+            autoClickerBtn.disabled = true;
+        }
+        else autoClickerBtn.disabled = false;
+    }
+
+    disableDonutMult(){
+        const donMultBtn = document.querySelector(".donutMultiplier");
+        if(this.donutCount < this.donutMultCost){
+            donMultBtn.disabled = true;
+        }
+        else donMultBtn.disabled = false;
+    }
 }
     
