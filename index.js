@@ -5,20 +5,19 @@ const donutMaker = new DonutMaker();
 // donutMaker.addToDonutCount()
 setInterval(function(){
   donutMaker.activateAutoClickers();
-
 },1000);
 
 setInterval(function(){
   donutMaker.disableAutoClicker();
   donutMaker.disableDonutMult();
-  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
+  totalDisplay.innerText = "Vegetable Count: " + Math.floor(donutMaker.donutCount);
   multDisplay.innerText = "Tractor Count: " + donutMaker.donutMultiplier;
   autoDisplay.innerText = "Farmer Count: " + donutMaker.autoClicker;
   valueOfMult.innerText = "Vegetables Earned Per Click: " + Math.pow(1.2, donutMaker.donutMultiplier).toFixed(2);
   autoClickCostDisplay.innerText = "Farmer Cost: " + Math.round(donutMaker.autoClickerCost);
   donMultCostDisplay.innerText = "Tractor Cost: " + Math.round(donutMaker.donutMultCost);
   restartGameBtn.innerText = "Start Over";
-},500);
+},200);
 
 const addDonutBtn = document.querySelector(".donutButton");
 const totalDisplay = document.querySelector(".totalDonutCount")
@@ -34,20 +33,14 @@ const restartGameBtn = document.querySelector(".restartGameBtn");
 
 addDonutBtn.addEventListener("click", () => {
   donutMaker.addToDonutCount();
-  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
-
 })
 
 addAutoClickBtn.addEventListener("click", () =>{
   donutMaker.addToAutoClickerCount();
-  autoDisplay.innerText = "Tractor Count: " + donutMaker.autoClicker;
-  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
 })
 
 addDonutMultBtn.addEventListener("click", () => {
   donutMaker.addToDonutMultCount();
-  multDisplay.innerText = "Tractor Count: " + donutMaker.donutMultiplier;
-  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
 })
 
 const companyModal = document.querySelector(".companyModal");

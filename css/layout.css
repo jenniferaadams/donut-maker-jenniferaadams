@@ -31,11 +31,13 @@ nav>ul{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .donutMultSection{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .restartGameSection{
     display: flex;
