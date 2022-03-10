@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fred the Baker Baking Company</title>
+    <title>Farm Clicker</title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Fredoka&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>Welcome to Donut Clicker!</h1>
+      <div class="topBanner">
+        <img src="/img/banner.png">
+      </div>
     <nav>
       <ul>
         <li><button class="companyButton">Company Info</button></li>
         <li><a href="https://cookie-clicker.co/" <button class="cookieLink">Game Inspiration</button></a></li>
         <li><button class="developerInfoBtn">About the Developer</button></li>
       </ul></nav>
+      <div class="container">
       <div class="companyModal">
           <div class="modal-content">
             <span class="companyClose">&times;</span>
@@ -26,28 +34,26 @@
           <p>This section is about Jennifer Adams</p>
         </div>
     </div>
-    <div class="MainDonutSection">
-        <h1 class="totalDonutCount"></h1>
-        <button class="donutButton">Donut!</button>
-
-    </div>
-
-    <div class="AutoClickerSection">
+    <div class="autoClickerSection">
         <h1 class="totalAutoClickerCount"></h1>
         <button class="autoClicker">AutoClicker</button>
         <h2 class="autoClickerCostDisplay"></h2>
         </div>
-    <div class="DonutMultiplierSection">   
+        <div class="MainDonutSection">
+          <img src="/img/vegetables.png" class="donutButton"></img>
+          <h1 class="totalDonutCount"></h1>
+      </div>
+    <div class="donutMultSection">   
       <h1 class="totalDonutMultiplierCount"></h1>
         <button class="donutMultiplier">DonutMultiplier</button>
         <h2 class="multCostDisplay"></h2>
         <h2 class ="earnedPerClick"></h2>
       </div> 
-      <div class = "RestartGameSection">
-        <button class="restartGameBtn"></button>
-      </div>
-
-    <div class="container"></div>
+      
+    </div>
+    <div class = "restartGameSection">
+      <button class="restartGameBtn"></button>
+    </div>
     <script src="./index.js" type="module"></script>
   </body>
 </html>

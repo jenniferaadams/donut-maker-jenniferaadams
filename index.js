@@ -11,12 +11,12 @@ setInterval(function(){
 setInterval(function(){
   donutMaker.disableAutoClicker();
   donutMaker.disableDonutMult();
-  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
   multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
   autoDisplay.innerText = "Auto Clicker Count: " + donutMaker.autoClicker;
-  valueOfMult.innerText = "Donuts Earned Per Click: " + Math.pow(1.2, donutMaker.donutMultiplier).toFixed(2);
+  valueOfMult.innerText = "Vegetables Earned Per Click: " + Math.pow(1.2, donutMaker.donutMultiplier).toFixed(2);
   autoClickCostDisplay.innerText = "Auto Clicker Cost: " + Math.round(donutMaker.autoClickerCost);
-  donMultCostDisplay.innerText = "Donut Multiplier Cost: " + Math.round(donutMaker.donutMultCost);
+  donMultCostDisplay.innerText = "Vegetable Multiplier Cost: " + Math.round(donutMaker.donutMultCost);
   restartGameBtn.innerText = "Start Over";
 },500);
 
@@ -34,20 +34,20 @@ const restartGameBtn = document.querySelector(".restartGameBtn");
 
 addDonutBtn.addEventListener("click", () => {
   donutMaker.addToDonutCount();
-  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
 
 })
 
 addAutoClickBtn.addEventListener("click", () =>{
   donutMaker.addToAutoClickerCount();
   autoDisplay.innerText = "Auto Clicker Count: " + donutMaker.autoClicker;
-  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
 })
 
 addDonutMultBtn.addEventListener("click", () => {
   donutMaker.addToDonutMultCount();
   multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
-  totalDisplay.innerText = "Donut Count: " + Math.round(donutMaker.donutCount);
+  totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
 })
 
 const companyModal = document.querySelector(".companyModal");

@@ -1,0 +1,41 @@
+.topBanner {
+    display: flex;
+    justify-content: space-around;
+}
+nav>ul{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: #676545;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: large;
+}
+.donutButton{
+    width: auto;
+    height: 25em;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.totalDonutCount{
+    display: flex;
+    justify-content: center;
+}
+.autoClickerSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.donutMultSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.restartGameSection{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,12 @@
+body{
+    background-color: #f8e8d3;
+}
+.cookieLink {
+   text-decoration: none;
+   background-color: white; 
+    font-size: large;
+}
+*{
+    font-family: 'Fredoka', sans-serif;
+    color: #676545;
+}
