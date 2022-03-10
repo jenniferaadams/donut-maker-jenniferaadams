@@ -1,6 +1,7 @@
 .topBanner {
     display: flex;
     justify-content: space-around;
+    padding-top: 1em;
 }
 nav>ul{
     display: flex;
@@ -10,8 +11,8 @@ nav>ul{
     background-color: #676545;
     padding-top: 1em;
     padding-bottom: 1em;
-    font-size: large;
 }
+
 .donutButton{
     width: auto;
     height: 25em;
@@ -20,6 +21,7 @@ nav>ul{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    margin: 8px;
 }
 .totalDonutCount{
     display: flex;
@@ -38,4 +40,5 @@ nav>ul{
 .restartGameSection{
     display: flex;
     justify-content: center;
+    padding-top: 2em;
 }

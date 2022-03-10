@@ -12,11 +12,11 @@ setInterval(function(){
   donutMaker.disableAutoClicker();
   donutMaker.disableDonutMult();
   totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
-  multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
-  autoDisplay.innerText = "Auto Clicker Count: " + donutMaker.autoClicker;
+  multDisplay.innerText = "Tractor Count: " + donutMaker.donutMultiplier;
+  autoDisplay.innerText = "Farmer Count: " + donutMaker.autoClicker;
   valueOfMult.innerText = "Vegetables Earned Per Click: " + Math.pow(1.2, donutMaker.donutMultiplier).toFixed(2);
-  autoClickCostDisplay.innerText = "Auto Clicker Cost: " + Math.round(donutMaker.autoClickerCost);
-  donMultCostDisplay.innerText = "Vegetable Multiplier Cost: " + Math.round(donutMaker.donutMultCost);
+  autoClickCostDisplay.innerText = "Farmer Cost: " + Math.round(donutMaker.autoClickerCost);
+  donMultCostDisplay.innerText = "Tractor Cost: " + Math.round(donutMaker.donutMultCost);
   restartGameBtn.innerText = "Start Over";
 },500);
 
@@ -40,13 +40,13 @@ addDonutBtn.addEventListener("click", () => {
 
 addAutoClickBtn.addEventListener("click", () =>{
   donutMaker.addToAutoClickerCount();
-  autoDisplay.innerText = "Auto Clicker Count: " + donutMaker.autoClicker;
+  autoDisplay.innerText = "Tractor Count: " + donutMaker.autoClicker;
   totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
 })
 
 addDonutMultBtn.addEventListener("click", () => {
   donutMaker.addToDonutMultCount();
-  multDisplay.innerText = "Multiplier Count: " + donutMaker.donutMultiplier;
+  multDisplay.innerText = "Tractor Count: " + donutMaker.donutMultiplier;
   totalDisplay.innerText = "Vegetable Count: " + Math.round(donutMaker.donutCount);
 })
 
