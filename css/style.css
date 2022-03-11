@@ -46,7 +46,7 @@ body{
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    width: 50%; 
     text-align: center;
 
   }
@@ -108,4 +108,14 @@ body{
   .toolTipTractor:hover .toolTipTrText{
     visibility: visible;
   }
-
+  .gitHubPic{
+    height: 3em;
+  }
+  .linkedInPic{
+    height: 3em;
+  }
+.list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
