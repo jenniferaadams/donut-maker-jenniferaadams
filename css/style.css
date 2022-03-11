@@ -66,4 +66,46 @@ body{
   .footer{
     color: white;
   }
-  
+  .toolTip{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toolTip .toolTipText {
+    visibility: hidden;
+    background-color: white;
+    color: #676545;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    width: 20em;
+    top: -5px;
+    right: 105%;
+  }
+  .toolTip:hover .toolTipText {
+    visibility: visible;
+  }
+  .toolTipTractor{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .toolTipTractor .toolTipTrText {
+    visibility: hidden;
+    background-color: white;
+    color: #676545;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    width: 20em;
+    top: -5px;
+    right: 105%;
+  }
+  .toolTipTractor:hover .toolTipTrText{
+    visibility: visible;
+  }
+

@@ -24,7 +24,7 @@ nav>ul{
     transform: scale(1.1);
 } */
 .donutButton:active{
-    transform: scale(.9);
+    transform: scale(.97);
 }
 
 .container{
@@ -79,6 +79,7 @@ nav>ul{
 .farmers{
     width: 10em;
 }
+
 .tractor{
     width: 10em;
 }
